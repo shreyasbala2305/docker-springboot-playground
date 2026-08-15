@@ -1,1 +1,29 @@
-spring.application.name=springboot-demo
+spring:
+
+  application:
+    name: springboot-demo
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/docker_demo
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+  endpoint:
+    health:
+      show-details: always
+
+info:
+  app:
+    name: Docker Spring Boot Demo
+    version: 1.0.0
