@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  app:
+    build: ../../springboot-demo
+    ports:
+      - "8080:8080"
+
+  postgres:
+    image: postgres:17
